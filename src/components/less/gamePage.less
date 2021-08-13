@@ -1,0 +1,44 @@
+@h-title: 36px; // 标题高度
+@fs-title: @h-title * 0.75; // 标题字体大小
+@w-info: 300px; // 信息宽度
+@h-func: 64px;  // 功能高度
+
+.gamePage {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    width: 100%;
+    height: @h-title;
+    line-height: @h-title;
+    font-size: @fs-title;
+  }
+  &__body {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    &__content {
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      &__game {
+        width: 100%;
+        flex: 1;
+      }
+      &__func {
+        width: 100%;
+        height: @h-func;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    &__info {
+      width: @w-info;
+      height: 100%;
+      padding: 12px;
+    }
+  }
+}

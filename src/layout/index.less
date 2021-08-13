@@ -1,0 +1,41 @@
+@import "~antd/dist/antd.css";
+
+@h-title: 70px; // 标题高度
+@fs-title: @h-title * 0.5; // 标题字体大小
+@w-menu: 256px; // 菜单宽度
+@pd-content: 18px; // 内容内边距
+@top-userInfo: 18px; // 个人信息页的上边距
+@right-userInfo: 36px; // 个人信息页的下边距
+
+.layout {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__title { 
+    width: 100%;
+    height: @h-title; 
+    line-height: @h-title;
+    font-size: @fs-title;
+    text-align: center 
+  }
+  &__userInfo {
+    position: absolute;
+    top: @top-userInfo;
+    right: @right-userInfo;
+  }
+  &__body {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    &__menu {
+      width: @w-menu;
+    }
+    &__content {
+      flex: 1;
+      padding: @pd-content;
+    }
+  }
+}

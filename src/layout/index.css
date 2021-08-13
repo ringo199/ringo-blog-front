@@ -1,0 +1,33 @@
+@import "~antd/dist/antd.css";
+.layout {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.layout__title {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  font-size: 35px;
+  text-align: center;
+}
+.layout__userInfo {
+  position: absolute;
+  top: 18px;
+  right: 36px;
+}
+.layout__body {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.layout__body__menu {
+  width: 256px;
+}
+.layout__body__content {
+  flex: 1;
+  padding: 18px;
+}
